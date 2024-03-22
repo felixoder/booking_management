@@ -38,14 +38,15 @@ export default function SignUp() {
     };
   return (
     <div className='flex flex-col'>
-      {errorMessage && 
+      
+        <form onSubmit={handleSubmit}>
+            <div className='flex flex-col w-[400px] justify-center  mx-auto gap-2 '>
+<h1 className='font-semibold text-2xl text-center'>Register Here</h1>
+{errorMessage && 
       
       <Alert color='red' className='mx-auto' >{errorMessage}</Alert>
       
       }
-        <form onSubmit={handleSubmit}>
-            <div className='flex flex-col w-[400px] justify-center  mx-auto gap-2 '>
-<h1 className='font-semibold text-2xl text-center'>Register Here</h1>
       <TextInput type='text'   id='u_name' placeholder='Enter Your Username' onChange={handleChange}/>
       <TextInput type='email'  id='u_email' placeholder='Enter Your Email' onChange={handleChange}/>
       <TextInput type='password' id='u_pass' placeholder='Enter Your Password' onChange={handleChange}/>

@@ -22,9 +22,8 @@ const MemberSchema = new mongoose.Schema({
     },
     isAdmin:{
         type:Boolean,
-        default:true,
+        default:false,
 
-        // after admin it should be set to false
 
 
     }
